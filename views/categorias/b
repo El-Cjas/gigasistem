@@ -1,0 +1,36 @@
+<?php
+?>
+
+
+
+<h2>Buscar categoria</h2>
+<form action="index.php?opcion=buscarCategorias" method="post">
+    <input type="text" name="termino" placeholder="Buscar categoría..." required>
+    <button type="submit">Buscar</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php if (isset($categorias) && count($categorias) > 0): ?> 
+            <?php foreach ($categorias as $categoria): ?>
+                <tr>
+                    <td><?= $categoria["ID"] ?></td>
+                    <td><?= $categoria["nombre"] ?></td>
+                    <td><?= $categoria["descripcion"] ?></td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <tr>
+                <td colspan="1">No se encontraron categorías.</td>
+            </tr>
+        <?php endif; ?>
+    </tbody>
+</table>
+
