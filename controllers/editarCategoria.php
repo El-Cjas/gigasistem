@@ -14,7 +14,7 @@
             
             
         console.log(datos);
-        $.post("../../models/Categoria.php",{categoria:"registrar" ,datos:JSON.stringify(datos)})
+        $.post("../../models/Categoria.php",{categoria:"editar" ,datos:JSON.stringify(datos)})
         .done(function(data){
             //console.log("Respuesta:", "["+data+"]", "tipo:", typeof data);
             //console.log("Respuesta del servidor:", data, typeof data);
