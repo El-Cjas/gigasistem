@@ -15,14 +15,14 @@
     </div>
     <div class="card-body">
         <form action="index.php?opcion=actualizarCategoria" method="post">
-            <input type="hidden" name="categoria[ID]" value="">
+            <input type="hidden" name="ID" value="">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" name="categoria[nombre]" id="nombre" value="<?="nada"?>" required>
+                <input type="text" class="form-control" name="nombre" id="nombre" value="<?="nada"?>" required>
             </div>
             <div class="form-group">
                 <label for="descripcion">Descripción</label>
-                <textarea class="form-control" name="categoria[descripcion]" id="descripcion" rows="3" required><?= "puta" ?></textarea>
+                <textarea class="form-control" name="descripcion" id="descripcion" rows="3" required><?= "puta" ?></textarea>
             </div>
             <button type="submit" class="btn btn-primary">
                 <i class="fas fa-save fa-sm text-white-50"></i>
@@ -31,5 +31,6 @@
         </form>
     </div>
 </div>
+<?php include_once "../../controllers/editarCategoria.php"; ?>
 
 <?php include_once "../layout/footer.php"; ?>

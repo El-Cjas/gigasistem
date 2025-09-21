@@ -3,6 +3,27 @@
 <script src="../../controllers/lib/sweetalert2.all.min.js"></script>
 <script>
     $(document).ready(function ($) {
+        const params = new URLSearchParams(window.location.search);
+        let id = params.get("id");
+
+        $.ajax({
+            url: "../../models/Categoria.php",
+            type: "POST",
+            data : {categoria: "consultar1",id}, //datos que se envian
+            success: function(respuesta){
+                let usuario = respuesta
+                console.log(usuario);
+                
+                $("#nombre").val(usuario.nombre);
+            },
+        }
+        )
+
+        //funcion para llenar los campos del formulario segun los parametros que hayan
+        function llenarFormulario(id) {
+            
+        }
+
         $("#nombre").focus();
 
         $("#enviar").click(function (params) {
@@ -11,8 +32,6 @@
                 nombre: $("#nombre").val(),
                 descripcion: $("#descripcion").val()
             };
-            
-            
         console.log(datos);
         $.post("../../models/Categoria.php",{categoria:"editar" ,datos:JSON.stringify(datos)})
         .done(function(data){

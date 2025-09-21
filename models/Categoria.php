@@ -125,7 +125,8 @@ if (isset($_GET["categoria"]) && $_GET["categoria"] == "consultar") {
 if (isset($_POST["categoria"]) && $_POST["categoria"] == "consultar1") {
     $categoria->setId($_POST["id"]);
     $resultado = $categoria->obtenerPorID();
-    print_r($resultado);
+    $categoria = json_encode($resultado);
+    echo $categoria[0];
 }
 if (isset($_POST["categoria"]) && $_POST["categoria"] == "registrar") {
     $datos = json_decode($_POST["datos"], true);

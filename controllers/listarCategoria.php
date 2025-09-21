@@ -31,9 +31,9 @@ $(document).ready(function () {
         //editar
     $(document).on("click",".editar-btn", function() {
         //logica de editar
-        let texto = $(this).data("id"); // $(this) es el elemento clickeado
-        console.log("Hiciste click en:", texto);
-        window.location.href = "editarCategoria.php?"
+        let id = $(this).data("id"); // $(this) es el elemento clickeado
+        
+        window.location.href = "editarCategoria.php?id="+id;
     });
     //eliminar
     $(document).on("click", ".eliminar-btn", function () {
