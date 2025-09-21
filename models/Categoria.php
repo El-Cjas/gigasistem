@@ -126,7 +126,7 @@ if (isset($_POST["categoria"]) && $_POST["categoria"] == "consultar1") {
     $categoria->setId($_POST["id"]);
     $resultado = $categoria->obtenerPorID();
     $categoria = json_encode($resultado);
-    echo $categoria[0];
+    echo $categoria;
 }
 if (isset($_POST["categoria"]) && $_POST["categoria"] == "registrar") {
     $datos = json_decode($_POST["datos"], true);
@@ -137,7 +137,7 @@ if (isset($_POST["categoria"]) && $_POST["categoria"] == "registrar") {
     echo $categoria->crear();
     // echo false;
 }
-if (isset($_POST["categoria"]) && $_POST["categoria"] == "actualizar") {
+if (isset($_POST["categoria"]) && $_POST["categoria"] == "editar") {
     $datos = json_decode($_POST["datos"], true);
     $categoria->setId($datos["id"]);
     $categoria->setNombre($datos["nombre"]);

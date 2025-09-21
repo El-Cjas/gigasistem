@@ -14,7 +14,7 @@
         <h6 class="m-0 font-weight-bold text-primary">Editar Categoría #</h6>
     </div>
     <div class="card-body">
-        <form action="index.php?opcion=actualizarCategoria" method="post">
+        <form action="" method="post">
             <input type="hidden" name="ID" value="">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
@@ -24,7 +24,7 @@
                 <label for="descripcion">Descripción</label>
                 <textarea class="form-control" name="descripcion" id="descripcion" rows="3" required><?= "puta" ?></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" id="enviar">
                 <i class="fas fa-save fa-sm text-white-50"></i>
                 Actualizar Categoría
             </button>

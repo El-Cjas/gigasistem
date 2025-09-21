@@ -14,7 +14,7 @@
         <h6 class="m-0 font-weight-bold text-primary">Buscar Categoría</h6>
     </div>
     <div class="card-body">
-        <form action="index.php?opcion=buscarCategorias" method="post" class="form-inline mb-3">
+        <form action="" method="post" class="form-inline mb-3">
             <div class="input-group w-100">
                 <input type="text" name="termino" class="form-control" placeholder="Buscar categoría...">
                 <div class="input-group-append">
@@ -52,6 +52,7 @@
         <div id="pagination"></div>
     </div>
 </div>
+
 <?php include_once "../../controllers/listarCategoria.php"?>
 
 <?php include_once "../layout/footer.php"?>

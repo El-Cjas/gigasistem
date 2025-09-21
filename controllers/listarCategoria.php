@@ -28,6 +28,7 @@ $(document).ready(function () {
            tbody.append(fila); 
         });
     })
+    $("#dataTable").Datatable()
         //editar
     $(document).on("click",".editar-btn", function() {
         //logica de editar
@@ -42,5 +43,6 @@ $(document).ready(function () {
         console.log("Hiciste click en:", texto);
     })
 })
+
 
 </script>
